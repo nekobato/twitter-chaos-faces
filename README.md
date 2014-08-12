@@ -9,7 +9,7 @@ for cron
 make build
 ```
 
-edit tokens.json
+edit tokens.json  
 set images to images/
 
 ### crontab(example)
