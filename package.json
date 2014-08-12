@@ -1,0 +1,17 @@
+{
+  "name": "twitter-chaos-faces",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nekobato",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "node-twitter-api": "^1.2.3",
+    "passport": "^0.2.0",
+    "passport-twitter": "^1.0.2"
+  }
+}
