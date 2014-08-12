@@ -5,7 +5,7 @@ path = require('path')
 fs = require('fs')
 _ = require('lodash')
 
-tokens = require('tokens')
+tokens = require('./tokens')
 
 IMAGE_DIR = path.resolve './images'
 TMP_FILE = path.resolve './tmp.png'
