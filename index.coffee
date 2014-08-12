@@ -53,7 +53,7 @@ selectShell = (imagefile) ->
       wavelength = _.random(10, 20)
       "convert -wave #{amplitude}x#{wavelength} #{imagefile} #{imagefile}"
     () ->
-      num -> _.random(-200, 200)
+      num = _.random(-200, 200)
       "convert -swirl #{num} #{imagefile} #{imagefile}"
   ]
   num = _.random(0, shells.length-1)
