@@ -9,6 +9,7 @@
   "author": "nekobato",
   "license": "ISC",
   "dependencies": {
+    "coffee-script": "^1.7.1",
     "lodash": "^2.4.1",
     "node-twitter-api": "^1.2.3",
     "passport": "^0.2.0",
