@@ -15,6 +15,7 @@ TWITTER_CONSUMER_SECERT = process.env.CONSUMER_SECRET || tokens.consumer_secret
 TWITTER_ACCESS_TOKEN = process.env.ACCESS_TOKEN || tokens.access_token
 TWITTER_ACCESS_SECRET = process.env.ACCESS_SECRET || tokens.access_secret
 
+fishEyeEffect = '-fx "kk=w*0.5;ll=h*0.5;dx=(i-kk);dy=(j-ll);aa=atan2(dy,dx);rr=hypot(dy,dx);rs=rr*rr/hypot(kk,ll);px=kk+rs*cos(aa);py=ll+rs*sin(aa);p{px,py}"'
 
 uploadProfileImage = (imagefile) ->
 
@@ -41,23 +42,27 @@ selectShell = (imagefile) ->
       "convert -noise #{num}x#{num} #{imagefile} #{imagefile}"
     () ->
       num = _.random(-90, 90)
-      "convert -rotate #{num} #{imagefile} #{imagefile}"
+      "convert -rotate #{num} {imagefile} #{imagefile}"
     () ->
       num = _.random(1, 10)
-      "convert -emboss #{num} #{imagefile} #{imagefile}"
+      "convert -emboss #{num} {imagefile} #{imagefile}"
     () ->
       num = _.random(1, 10)
-      "convert -edge #{num} #{imagefile} #{imagefile}"
+      "convert -edge #{num} {imagefile} #{imagefile}"
     () ->
       amplitude = _.random(10, 20)
       wavelength = _.random(10, 20)
-      "convert -wave #{amplitude}x#{wavelength} #{imagefile} #{imagefile}"
+      "convert -wave #{amplitude}x#{wavelength} {imagefile} #{imagefile}"
     () ->
       num = _.random(-200, 200)
-      "convert -swirl #{num} #{imagefile} #{imagefile}"
+      "convert -swirl #{num} {imagefile} #{imagefile}"
+    () ->
+      num = _.random(-200, 200)
+      "convert ##{fishEyeEffect} {imagefile} #{imagefile}"
   ]
   num = _.random(0, shells.length-1)
   return shells[num].call(this)
+
 
 
 # main
